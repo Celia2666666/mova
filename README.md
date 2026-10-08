@@ -43,3 +43,7 @@ Les photos réelles sont dans `public/assets/img/produits/` et déclarées dans 
 Fait : boutique (accueil, catalogue, filtres, fiches, ensembles 80 €, compose ton ensemble, panier, commande, paiement Stripe ou démo), compte client, espace fidélité MOVA Club, carte des studios, essayage virtuel 2D, chatbot, pop-up -5 %, cookies, pages légales (modèles), API complète du back-office et de l'espace partenaire.
 
 Reste à faire : interfaces `public/admin.html` (+ `js/admin.js`) et `public/partenaire.html` (+ `js/partner.js`) branchées sur les routes `/api/admin/*` et `/api/partner/*` déjà en place ; tests de bout en bout.
+
+## Déploiement
+
+Le dépôt GitHub est relié à Vercel : chaque `git push` sur `main` republie automatiquement le site https://mova-sepia-omega.vercel.app.
