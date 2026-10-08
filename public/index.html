@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>MOVA — Ton rythme. Ton style.</title>
+  <meta name="description" content="MOVA, sportswear féminin né à Lyon : ensembles, brassières, leggings et accessoires à porter du studio de Pilates à la ville. Une tenue. Tous tes plans.">
+  <meta name="theme-color" content="#FBF7EF">
+  <meta property="og:title" content="MOVA — Ton rythme. Ton style.">
+  <meta property="og:description" content="Sportswear féminin : une tenue, tous tes plans. Ensembles de survêtement, brassières, leggings, sweats et accessoires.">
+  <meta property="og:image" content="/assets/img/logo-mova.jpg">
+  <link rel="icon" href="/assets/img/symbole-mova-crop.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Syne:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin>
+  <link rel="stylesheet" href="/css/style.css?v=5">
+</head>
+<body>
+  <a class="skip" href="#main">Aller au contenu</a>
+
+  <div class="promo-bar" role="note"><span>Livraison offerte dès 60 € · Ensemble veste + pantalon à 80 € · Retours 30 jours</span></div>
+
+  <header class="site-header" id="header">
+    <div class="header-inner">
+      <button class="icon-btn burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="mobile-nav"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h18M3 12h18M3 17h18"/></svg></button>
+      <a href="#/" class="brand" aria-label="MOVA, accueil"><span class="brand-logo" data-logo="wordmark"></span></a>
+      <nav class="main-nav" aria-label="Menu principal">
+        <ul id="nav-list"></ul>
+      </nav>
+      <div class="header-actions">
+        <button class="icon-btn" id="search-btn" aria-label="Rechercher"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg></button>
+        <a class="icon-btn hide-sm" href="#/aide" aria-label="Service client"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M9.5 9.5a2.5 2.5 0 1 1 3.5 2.3c-.6.3-1 .8-1 1.5V14M12 17.5v.01"/></svg></a>
+        <a class="icon-btn" href="#/compte" aria-label="Mon compte" id="account-link"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"/></svg></a>
+        <a class="icon-btn" href="#/favoris" aria-label="Favoris"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/></svg><span class="badge" id="fav-count" hidden>0</span></a>
+        <button class="icon-btn" id="cart-btn" aria-label="Panier"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8h14l-1.2 12H6.2z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg><span class="badge" id="cart-count" hidden>0</span></button>
+      </div>
+    </div>
+    <div class="mega" id="mega" hidden></div>
+  </header>
+
+  <nav class="mobile-nav" id="mobile-nav" aria-label="Menu mobile" hidden></nav>
+
+  <main id="main" tabindex="-1"></main>
+
+  <footer class="site-footer">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <span class="brand-logo light" data-logo="wordmark"></span>
+        <p>Ton rythme. Ton style.<br>Sportswear féminin pensé à Lyon.</p>
+        <form class="newsletter-inline" data-newsletter="footer">
+          <label for="nl-footer">Newsletter : -5 % sur ta première commande</label>
+          <div class="inline-field"><input id="nl-footer" type="email" name="email" placeholder="ton@email.fr" autocomplete="email" required><button class="btn btn-light" type="submit">OK</button></div>
+          <label class="check small"><input type="checkbox" name="consent" required> J’accepte de recevoir les actualités et offres MOVA par e-mail. Désinscription en un clic.</label>
+          <p class="form-msg" aria-live="polite"></p>
+        </form>
+      </div>
+      <div><h3>Boutique</h3><ul><li><a href="#/nouveautes">Nouveautés</a></li><li><a href="#/categorie/ensembles">Ensembles de survêtement</a></li><li><a href="#/tenues">Toutes les tenues</a></li><li><a href="#/accessoires">Accessoires</a></li><li><a href="#/compose">Compose ton ensemble</a></li></ul></div>
+      <div><h3>MOVA</h3><ul><li><a href="#/mova-club">MOVA Club</a></li><li><a href="#/mova-pres-de-toi">MOVA près de toi</a></li><li><a href="#/univers">Notre univers</a></li><li><a href="#/univers/campagne">Une tenue. Tous tes plans.</a></li><li><a href="/partenaire">Espace studios</a></li></ul></div>
+      <div><h3>Aide</h3><ul><li><a href="#/aide">Service client &amp; FAQ</a></li><li><a href="#/guide-des-tailles">Guide des tailles</a></li><li><a href="#/aide/livraison">Livraison &amp; retours</a></li><li><a href="#/aide/contact">Nous contacter</a></li></ul></div>
+      <div><h3>Suis-nous</h3><ul><li><a href="https://www.instagram.com/" rel="noopener" target="_blank">Instagram</a></li><li><a href="https://www.tiktok.com/" rel="noopener" target="_blank">TikTok</a></li></ul></div>
+    </div>
+    <div class="footer-legal">
+      <span>© <span id="year"></span> MOVA</span>
+      <a href="#/legal/mentions">Mentions légales</a><a href="#/legal/cgv">CGV</a><a href="#/legal/confidentialite">Confidentialité</a><a href="#/legal/cookies">Cookies</a><a href="#/legal/accessibilite">Accessibilité</a>
+      <button class="linklike" id="cookie-settings">Gérer mes cookies</button>
+      <a href="#/credits-photos">Crédits photos</a>
+    </div>
+  </footer>
+
+  <!-- Panier latéral -->
+  <div class="drawer-backdrop" id="drawer-backdrop" hidden></div>
+  <aside class="drawer" id="cart-drawer" role="dialog" aria-modal="true" aria-labelledby="cart-title" hidden>
+    <div class="drawer-head"><h2 id="cart-title">Ton panier</h2><button class="icon-btn" data-close-drawer aria-label="Fermer le panier"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div>
+    <div class="drawer-body" id="cart-drawer-body"></div>
+  </aside>
+
+  <!-- Recherche -->
+  <div class="search-overlay" id="search-overlay" role="dialog" aria-modal="true" aria-label="Recherche" hidden>
+    <div class="search-box">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
+      <input id="search-input" type="search" placeholder="Rechercher un produit, un coloris…" autocomplete="off" aria-label="Rechercher" aria-controls="search-results">
+      <button class="icon-btn" id="search-close" aria-label="Fermer la recherche"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+    </div>
+    <div class="search-results" id="search-results" aria-live="polite"></div>
+  </div>
+
+  <!-- Pop-up de bienvenue -5 % -->
+  <div class="modal-backdrop" id="welcome" hidden>
+    <div class="modal welcome" role="dialog" aria-modal="true" aria-labelledby="welcome-title">
+      <div class="welcome-art" id="welcome-art" aria-hidden="true"></div>
+      <div class="welcome-body">
+        <button class="icon-btn modal-close" data-close-welcome aria-label="Fermer"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+        <p class="eyebrow">Bienvenue chez MOVA</p>
+        <h2 id="welcome-title"><span id="welcome-percent">-5 %</span> sur ta première commande</h2>
+        <p>Rejoins la communauté MOVA : nouveautés, drops de coloris et événements à Lyon.</p>
+        <form id="welcome-form" data-newsletter="popup_bienvenue">
+          <label for="welcome-email" class="sr-only">Adresse e-mail</label>
+          <input id="welcome-email" type="email" name="email" placeholder="ton@email.fr" autocomplete="email" required>
+          <label class="check small"><input type="checkbox" name="consent" required> J’accepte de recevoir les actualités et offres MOVA par e-mail. Désinscription en un clic.</label>
+          <button class="btn btn-dark btn-block" type="submit">Je profite de -5 %</button>
+          <p class="form-msg" aria-live="polite"></p>
+        </form>
+        <div id="welcome-success" hidden></div>
+        <button class="linklike muted" data-close-welcome>Non merci</button>
+        <p class="tiny muted" id="welcome-terms"></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bandeau cookies -->
+  <div class="cookie-banner" id="cookie-banner" role="dialog" aria-labelledby="cookie-title" hidden>
+    <h2 id="cookie-title">Tes préférences de cookies</h2>
+    <p>Nous utilisons des cookies nécessaires au fonctionnement du site (panier, connexion). Avec ton accord, nous utilisons aussi des cookies de mesure et de personnalisation. Tu peux changer d’avis à tout moment. <a href="#/legal/cookies">En savoir plus</a></p>
+    <div class="cookie-choices" id="cookie-details" hidden>
+      <label class="check"><input type="checkbox" checked disabled> Nécessaires (toujours actifs)</label>
+      <label class="check"><input type="checkbox" id="ck-analytics"> Mesure d’audience détaillée</label>
+      <label class="check"><input type="checkbox" id="ck-marketing"> Personnalisation et publicité</label>
+    </div>
+    <div class="cookie-actions">
+      <button class="btn btn-outline" id="cookie-refuse">Tout refuser</button>
+      <button class="btn btn-outline" id="cookie-custom">Personnaliser</button>
+      <button class="btn btn-dark" id="cookie-accept">Tout accepter</button>
+    </div>
+  </div>
+
+  <!-- Assistant MOVA -->
+  <button class="chat-bubble" id="chat-bubble" aria-label="Ouvrir l’Assistant MOVA" aria-expanded="false" aria-controls="chat-panel"><span class="brand-logo symbol light" data-logo="symbol"></span></button>
+  <section class="chat-panel" id="chat-panel" aria-label="Assistant MOVA" hidden>
+    <header><div><strong>Assistant MOVA</strong><span class="tiny">Tu échanges avec un assistant IA. Pour une personne : « service client ».</span></div><button class="icon-btn" id="chat-close" aria-label="Fermer l’assistant"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button></header>
+    <div class="chat-log" id="chat-log" aria-live="polite"></div>
+    <div class="chat-suggestions" id="chat-suggestions"></div>
+    <form class="chat-form" id="chat-form"><label for="chat-input" class="sr-only">Ton message</label><input id="chat-input" autocomplete="off" placeholder="Pose ta question…" maxlength="500"><button class="btn btn-dark" type="submit" aria-label="Envoyer">→</button></form>
+  </section>
+
+  <div class="toast-zone" id="toasts" aria-live="polite" aria-atomic="false"></div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcode-generator/1.4.4/qrcode.min.js" defer></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" defer crossorigin></script>
+  <script src="/js/photos.js?v=5" defer></script>
+  <script src="/js/app.js?v=5" defer></script>
+  <script src="/js/pages.js?v=5" defer></script>
+</body>
+</html>

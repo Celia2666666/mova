@@ -1,0 +1,19 @@
+{
+  "name": "mova-boutique",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Boutique en ligne MOVA — sportswear féminin. Ton rythme. Ton style.",
+  "main": "server.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node server.js",
+    "seed": "node data/seed.js --force",
+    "test": "node test/smoke.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "latest"
+  }
+}
